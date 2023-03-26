@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Winners Selector</title>
+  </head>
+  <body>
+    <h1>Random Winners Selector</h1>
+    <form method="post" action="{% url 'select-winners' %}">
+      {% csrf_token %}
+      <label for="names">Enter comma-separated names:</label>
+      <input type="text" name="names" id="names">
+      <button type="submit">Select Winners</button>
+    </form>
+  </body>
+</html>
