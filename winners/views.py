@@ -8,7 +8,6 @@ from rest_framework.views import APIView
 from django.http import HttpResponse
 
 
-# Program
 class WinnerDecider():
     '''
         This class is used to take comma separated names as an input in an input box and select 5 random winners
@@ -33,7 +32,7 @@ class WinnerDecider():
         winners = random.sample(names, 5)
         cls.write_csv(winners)
 
-# API
+
 class GetTopFiveWinners(APIView):
     def get(self, request):
         '''
